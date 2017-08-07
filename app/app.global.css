@@ -1,0 +1,20 @@
+@import '~todomvc-app-css/index.css';
+
+body {
+  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 100vh;
+  margin: 20px;
+  background-color: #fefefe;
+  overflow-y: hidden;
+}
+
+h1 {
+  width: 100%;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+  height: 50px;
+  margin-top: -20px;
+}
