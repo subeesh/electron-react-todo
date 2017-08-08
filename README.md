@@ -74,3 +74,9 @@ Jest comes with default code coverage report. The following command generates re
 ```
 npm run coverage
 ```
+
+### TODO
+
+- Add more tests for the React Components using Jest and [Enzyme](https://github.com/airbnb/enzyme)
+- Introduce [ESlint](http://eslint.org/) with [Pretter](https://github.com/prettier/prettier) for code style
+- Add packaging option to package the app as executables for Windows and Mac
