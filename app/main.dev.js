@@ -11,11 +11,8 @@ import initialState from "./store/initialState";
 
 const store = createStore(
   rootReducer,
-  initialState, // optional
-  applyMiddleware(
-    triggerAlias, // optional, see below
-    forwardToRenderer // IMPORTANT! This goes last
-  )
+  initialState,
+  applyMiddleware(triggerAlias, forwardToRenderer)
 );
 
 replayActionMain(store);
