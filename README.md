@@ -1,69 +1,82 @@
-# Jekyll Cayman theme
+# electron-react-todo
 
-This is a [Jekyll][1] theme for [@jasonlong][2]'s [Cayman theme][4] on [GitHub Pages][3].
+### TODO App in React, Redux and Electron
 
-Cayman is a clean, responsive theme for [GitHub Pages](https://pages.github.com). This theme is available as an option if you use the [Automatic Page Generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/) or you can copy the template and styles to use on your own.
+![alt text](https://raw.githubusercontent.com/subeesh/electron-react-todo/screencast/todo.gif "Todo App")
 
-You can preview the theme at http://jasonlong.github.io/cayman-theme or with real content at http://jasonlong.github.io/geo_pattern.
+## Getting Started
 
-![](http://cl.ly/image/1T3r3d18311V/content)
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-# How to use it?
+### Prerequisites
 
-Download the theme @ http://github.com/pietromenna/jekyll-cayman-theme/archive/master.zip
-
-Unzip it and use it as a regular jekyll folder.
+[Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) are required to run the program.
 
 ```
-$ unzip jekyll-cayman-theme-master.zip
+node >= v7.10.0
+npm  >= v4.2.0
 ```
 
-Get inside the newly extracted folder
-```
-$ cd jekyll-cayman-theme-master
-```
+### Installing
 
-Get the required gems
-```
-$ bundle install
-```
-
-Use it!
+ - Git clone or download the zip file
+ - cd into the folder
+ - Run npm install
 
 ```
-$ jekyll serve
+npm install
 ```
 
-For more details read about [Jekyll][1] on its web page.
+### Running the program
 
-# Setup
+To run the production build,
 
-Some important configuration can be done in the file `_config.yml`. Please, check the Setup section in that file.
+```
+npm start
+```
+To run the program in development mode,
 
+```
+npm run dev
+```
 
-## baseurl
+### Libraries Used
 
-`baseurl` parameter is required in the case the site doesn't sit on the root of the domain. For example: http://pietromenna.github.io/jekyll-cayman-theme
+- [React](https://facebook.github.io/react) - View Layer
+- [Redux](https://github.com/reactjs/redux) - State Management
+- [Electron](https://electron.atom.io/) - Desktop Application Framework
+- [Electron Redux](https://github.com/hardchor/electron-redux) - Manage redux state across multiple windows
+- [Webpack](https://webpack.js.org/) - Module Bundler
+- [todomvc-app-css](https://github.com/tastejs/todomvc-app-css) - CSS Styles
+- [Jest](https://github.com/facebook/jest) - Testing framework
 
-In the case above the baseurl should be set to "/jekyll-cayman-theme".
+The project uses a stripped down version of [electron-react-boilerplate](https://github.com/chentsulin/electron-react-boilerplate) as starting point.
 
-In the case the site sits in the root, you can leave `baseurl` as empty "".
+## Testing
 
-# Contributing
+### Running the tests
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/pietromenn/jekyll-cayman-theme.
+Unit tests are written using [Jest](http://facebook.github.io/jest/). To execute tests, run:
 
-# Development
+```
+npm test
+```
 
-To set up your environment to develop this theme, run `bundle install`.
+💡 To keep Jest running in the background to watch for file changes, run:
+```
+npm run test-watch
+```
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### Code Coverage
 
-# License
+Jest comes with default code coverage report. The following command generates reports in a folder named coverage in the project directory.
 
-This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
+```
+npm run coverage
+```
 
-[1]: http://jekyllrb.com/
-[2]: https://github.com/jasonlong
-[3]: http://pages.github.com/
-[4]: https://github.com/jasonlong/cayman-theme
+### TODO
+
+- Add more tests for the React Components using Jest and [Enzyme](https://github.com/airbnb/enzyme)
+- Introduce [ESlint](http://eslint.org/) with [Pretter](https://github.com/prettier/prettier) for code style
+- Add packaging option to package the app as executables for Windows and Mac
