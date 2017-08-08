@@ -14,7 +14,8 @@
     "start-main-dev": "cross-env HOT=1 NODE_ENV=development electron -r babel-register ./app/main.dev",
     "start-renderer-dev": "cross-env NODE_ENV=development node --trace-warnings -r babel-register ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.renderer.dev.js",
     "test": "jest",
-    "test-watch": "npm test -- --watch"
+    "test-watch": "npm test -- --watch",
+    "coverage": "npm test -- --coverage"
   },
   "author": "Subeesh",
   "license": "ISC",
